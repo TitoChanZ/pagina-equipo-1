@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ana Poma | Perfil</title>
+	<link rel="stylesheet" href="styles.css">
+	<style>
+		/* Estilos pixeleados modernos para el perfil */
+		.profile-hero {
+			min-height: 100vh;
+			display: grid;
+			place-items: center;
+			padding: 120px 6vw 80px;
+			background:
+				linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+		}
+
+		.profile-card {
+			max-width: 480px;
+			width: 100%;
+			padding: 40px;
+			background: #1a1a2e;
+			border: 4px solid #d7f36b;
+			box-shadow:
+				0 0 0 4px #16213e,
+				0 0 0 8px #d7f36b,
+				0 20px 60px rgba(0, 0, 0, 0.5);
+			image-rendering: pixelated;
+			position: relative;
+		}
+
+		.profile-card::before {
+			content: "";
+			position: absolute;
+			top: -20px;
+			left: -20px;
+			width: 40px;
+			height: 40px;
+			background:
+				linear-gradient(135deg, #d7f36b 50%, transparent 50%);
+		}
+
+		.profile-card::after {
+			content: "";
+			position: absolute;
+			bottom: -20px;
+			right: -20px;
+			width: 40px;
+			height: 40px;
+			background:
+				linear-gradient(315deg, #ff7557 50%, transparent 50%);
+		}
+
+		.profile-avatar {
+			width: 120px;
+			height: 120px;
+			margin: 0 auto 24px;
+			display: grid;
+			place-items: center;
+			background: #16213e;
+			border: 4px solid #d7f36b;
+			font-size: 4rem;
+			image-rendering: pixelated;
+		}
+
+		.profile-name {
+			text-align: center;
+			color: #d7f36b;
+			font-family: "Courier New", monospace;
+			font-size: 2rem;
+			font-weight: bold;
+			letter-spacing: 0.05em;
+			margin-bottom: 8px;
+			text-transform: uppercase;
+		}
+
+		.profile-role {
+			text-align: center;
+			color: #ff7557;
+			font-family: "Courier New", monospace;
+			font-size: 0.9rem;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			margin-bottom: 32px;
+		}
+
+		.profile-info {
+			display: grid;
+			gap: 16px;
+		}
+
+		.info-row {
+			display: flex;
+			align-items: center;
+			gap: 16px;
+			padding: 16px;
+			background: #16213e;
+			border: 2px solid #0f3460;
+		}
+
+		.info-icon {
+			width: 40px;
+			height: 40px;
+			display: grid;
+			place-items: center;
+			background: #0f3460;
+			font-size: 1.2rem;
+			flex-shrink: 0;
+		}
+
+		.info-content {
+			flex: 1;
+		}
+
+		.info-label {
+			color: #647276;
+			font-family: "Courier New", monospace;
+			font-size: 0.7rem;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			margin-bottom: 4px;
+		}
+
+		.info-value {
+			color: #e8e6e1;
+			font-family: "Courier New", monospace;
+			font-size: 1rem;
+		}
+
+		.profile-back {
+			display: block;
+			text-align: center;
+			margin-top: 32px;
+			color: #d7f36b;
+			font-family: "Courier New", monospace;
+			font-size: 0.85rem;
+			text-decoration: none;
+			letter-spacing: 0.05em;
+		}
+
+		.profile-back:hover {
+			color: #ff7557;
+		}
+
+    .pixelsContainer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      /* z-index: -1; */
+    }
+
+		/* Decoración pixelada */
+		.pixel-decoration {
+			position: fixed;
+			width: 8px;
+			height: 8px;
+			pointer-events: none;
+		}
+
+		@media (max-width: 700px) {
+			.profile-card { padding: 24px; }
+			.profile-name { font-size: 1.5rem; }
+			.profile-avatar { width: 100px; height: 100px; font-size: 3rem; }
+		}
+
+    @keyframes pixelFall{
+      0%{transform: translateY(-10vh); opacity: 0;}
+      2%{opacity: 1;}
+      /* 50%{transform: translateY(auto);} */
+      100%{transform: translateY(100vh);}
+    }
+	</style>
+</head>
+<body>
+
+  <div class="pixelsContainer" id="pixelsContainer">
+    <!-- <div class="pixel-decoration pixel-1"></div>
+    <div class="pixel-decoration pixel-2"></div>
+    <div class="pixel-decoration pixel-3"></div> -->
+  </div>
+
+
+
+
+
+
+
+
+	<main class="profile-hero">
+		<article class="profile-card">
+			<img class="profile-avatar" src="https://avatars.githubusercontent.com/u/100386835?v=4" alt="Avatar de Poma" style="object-fit: cover; border-radius: 0;">
+			<h1 class="profile-name">Poma</h1>
+			<p class="profile-role">Líder del Equipo</p>
+
+			<div class="profile-info">
+				<div class="info-row">
+					<div class="info-icon">🎓</div>
+					<div class="info-content">
+						<p class="info-label">Carrera</p>
+						<p class="info-value">Ingeniería de Software</p>
+					</div>
+				</div>
+
+				<div class="info-row">
+					<div class="info-icon">🎮</div>
+					<div class="info-content">
+						<p class="info-label">Hobby</p>
+						<p class="info-value">Dev and Games</p>
+					</div>
+				</div>
+
+				<div class="info-row">
+					<div class="info-icon">💻</div>
+					<div class="info-content">
+						<p class="info-label">Rol</p>
+						<p class="info-value">Team Lead</p>
+					</div>
+				</div>
+			</div>
+
+			<a class="profile-back" href="index.html">← Volver al equipo</a>
+		</article>
+	</main>
+  <script src="poma.js"></script>
+</body>
+</html>
