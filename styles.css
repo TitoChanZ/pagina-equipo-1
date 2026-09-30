@@ -385,6 +385,7 @@ nav a:hover { color: var(--orange); }
 	margin-bottom: 22px;
 	border: 1px dashed var(--profile-border);
 	background: var(--profile-bg);
+  object-fit: cover;
 }
 
 .avatar {
@@ -397,6 +398,7 @@ nav a:hover { color: var(--orange); }
 	background: var(--avatar-bg);
 	border-radius: 50%;
 	font-family: "Trebuchet MS", sans-serif;
+  
 	font-weight: bold;
 }
 
